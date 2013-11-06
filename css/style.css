@@ -55,6 +55,7 @@ nav ul {
   list-style: none outside none;
   text-align: center;
   overflow: hidden;
+  padding-left: 0;
 }
 
 nav li {

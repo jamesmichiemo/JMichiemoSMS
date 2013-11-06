@@ -1,0 +1,106 @@
+body {
+  color: #231F20;
+  font-family: 'Share Tech', sans-serif; 
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5em;
+}
+
+#top-bar {
+  border-top: 5px solid #000000;
+}
+
+.container {
+  margin: 0 auto;
+  width: 950px;
+}
+
+.login-link {
+  font-size: 0.75em;
+  height: 12px;
+  padding: 9px;
+  text-align: right;
+}
+
+a, a:visited {
+  color: #279327;
+}
+
+.content {
+  margin: 2em auto 0;
+  width: 500px;
+}
+
+header {
+  text-align: center;
+}
+
+.video {
+  height: 333px;
+}
+
+.video-container {
+  height: 333px;
+  width: 500px;
+}
+
+nav {
+  font-size: 0.75em;
+  line-height: 1.25em;
+  overflow: hidden;
+  padding: 0.75em 0;
+}
+
+nav ul {
+  list-style: none outside none;
+  text-align: center;
+  overflow: hidden;
+}
+
+nav li {
+  border-right: 1px solid #000000;
+  display: inline;
+  margin-right: 6px;
+  padding-right: 8px;
+  color: #333333;
+  vertical-align: baseline;
+}
+
+nav li.last{
+  border: medium none;
+}
+
+main {
+  font-size: 0.75em;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+#twitter {
+  margin-top: 1em;
+  text-align: center;
+}
+
+footer {
+  border-top: 3px solid #000000;
+  clear: both;
+  color: #555555;
+  font-size; 0.75em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 075em 0;
+  text-align: center;
+}
+
+.login-container {
+  margin: 0 auto 1em;
+  overflow: hidden;
+  width: 950px;
+}
+
+

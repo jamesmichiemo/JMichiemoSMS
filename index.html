@@ -1,24 +1,114 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <script type="text/javascript" src="js/demo.js"></script>
-        <script type="text/javascript" src="js/swfobject.js"></script>
-        <script type="text/javascript" src="js/sms_setup.js"></script>
- </head>
- <body>
-    <div style="width: 640px; height: 480px;">
-        <div id="flashContent">
-            <script type="text/javascript">
-                var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://");
-                document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" );
-            </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Emu Academy</title>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link href="http://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.2/video.js"></script>
+    <style type="text/css">
+      .vjs-default-skin { color: #881157; }
+      .vjs-default-skin .vjs-play-progress,
+      .vjs-default-skin .vjs-volume-level { background-color: #2a993d }
+      .vjs-default-skin .vjs-control-bar,
+      .vjs-default-skin .vjs-big-play-button { background: rgba(0,0,0,0.7) }
+      .vjs-default-skin .vjs-slider { background: rgba(0,0,0,0.2333333333333333) }
+    </style>
+  </head>
+  <body>
+    <div id="top-bar"></div>
+    <div class='container'>
+      <div class='login-link'>
+        <a href='/login'>Log in</a>
+      </div>
+      <div class='content'>
+        <header>
+          <img src="/assets/logo.png" alt='Emu School logo'>
+        </header>
+        <div class='video'>
+          <div class='video-container' style='overflow: hidden; position: relative; display: block;'>
+            <video id="my_video_1" class="video-js vjs-default-skin" controls
+             preload="auto" width="640" height="264" poster="my_video_poster.png"
+              data-setup="{}">
+              <source src="my_video.mp4" type='video/mp4'>
+              <source src="my_video.webm" type='video/webm'>
+              </video>
+            <nav>
+              <ul>
+                <li>
+                  <img src='img/play.png' alt='play' height='20' width='20'>
+                </li>
+                <li>
+                  <img src='img/stop.png' alt='stop' height='20' width='20'>
+                </li>
+                <li>
+                  <img src='img/seekbar.png' alt='seek' height='20' width='160'>
+                </li>
+                <li>
+                  <img src='img/vol.png' alt='volume' height='20' width='20'>
+                  <img src='img/seekbar.png' alt='volume bar' height='20' width='40'>
+                </li>
+                <li>
+                  <img src='img/rec.png' alt='record' height='20' width='20'>
+                </li>
+                <li>
+                  <img src='img/cam.png' alt='camera' height='20' width='20'>
+                  </li>
+                <li>
+                  <img src='img/mic.png' alt='mic' height='20' width='20'>
+                </li>
+              </ul>
+            </nav>                 
+          </div>
         </div>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>
+              <a href='/about'>About</a>
+            </li>
+            <li>
+              <a href='/curriculum'>Curriculum</a>
+            </li>
+            <li>
+              <a href='/faq'>FAQ</a>
+            </li>
+            <li>
+              <a href='/videos'>Videos</a>
+            </li>
+            <li>
+              <a href='/testimonials'>Testimonials</a>
+            </li>
+            <li>
+              <a href='/blog'>Blog</a>
+            </li>
+            <li class='last'>
+              <a href='/register'>Register</a>
+            </li>
+          </ul>
+        </nav>
+        <main>
+        <br>
+        <p> Emu Academy is an elearning website for those who want to become better programmers. We provide free tutorials, time to concentrate, a bit of structure, and a variety of topics for smart craftsmen devoted to self-improvement.</p>
+        <p>We value free software, self-paced development, and shipping clean code.
+        <a href="/about">More...</a>
+        <div id="twitter">
+          We're
+          <a href="http://twitter.com/emuacademy">@emuacademy</a>
+          on Twitter.
+        </div>
+        </p>
+        </main>
+        <footer>
+          Emu Academy
+          <img src=/assets/egg.png" alt='egg'>
+          . This is a lab assignment.  
+          <a href='http://github.com/jamesmichiemo/'>Fork me on Github</a>
+        </footer>
+      </div>
     </div>
-
-   </body>
+    
+  </body>
 </html>

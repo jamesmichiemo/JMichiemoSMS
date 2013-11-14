@@ -53,7 +53,6 @@ nav {
 
 nav ul {
   list-style: none outside none;
-  text-align: center;
   overflow: hidden;
   padding-left: 0;
 }
@@ -69,6 +68,26 @@ nav li {
 
 nav li.last{
   border: medium none;
+}
+
+.bar li{
+  border-right: none;
+}
+
+.seekbar, .volbar {
+  background-image:url('../img/seekbar.png');
+  width: 100px;
+  display: inline-block; 
+  background-size: 100% 100%;
+  background-position: 5% 5%;
+}
+
+.volbar{
+  width: 50px;
+}
+
+li .cursor {
+  text-align: none;
 }
 
 main {

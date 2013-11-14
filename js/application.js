@@ -1,8 +1,17 @@
+var playing = false,
+    recording = false,
+    videoDuration,
+    totalDuration,
+    camera=[],
+    audio=[],
+    audioSourceHTML ="";
+
+
+
 var flashReady = function() {
   flash.connect('rtmp://localhost/SMSServerTwo');
 };
 
-var playing = false;
 $('.play').click(function(e){
   if(!playing){
     flash.playPause();
@@ -17,7 +26,6 @@ $('.play').click(function(e){
   return false;
 });
 
-var recording = false;
 $('.rec').on('click', function(e){
   if(!recording){
     flash.startRecording('movie', 0, 0);
@@ -33,13 +41,14 @@ $('.rec').on('click', function(e){
   
 var connected = function(success,error){
   if(success){
+    audio = flash.getMicrophones();
+    
     flash.startPlaying("hobbit_vp6.flv");
     $('.play img').attr('src', 'img/stop.png');
+
+    loadSources();
   } 
 };
-
-var videoDuration;
-var totalDuration;
 
 
 var getDuration = function(time){
@@ -73,12 +82,29 @@ $('.seekbar').on('click', function(e){
   flash.setTime(time);
 
   e.preventDefault();
+  console.log(perc);
   return false;
-
 
 });
 
-  
+$('.volbar').on('click', function(e){
+  var left = e.pageX - $(this).offset().left;
+  var perc = left / $('.volbar img').width();
+  $('.volbar img').css('margin-left', left+'px');
+  flash.setVolume(perc);
+});
 
 
+$('.mic').mouseenter(function(){
+  $('.mic div').html('<select>' + audioSourceHTML + "</select>").fadeIn();
+}); 
+     
+$('select').mouseleave(function(){
+  $(this).fadeOut();
+});
 
+var loadSources = function(){
+  for(var i = 0, max = cameras.length; i<max; i++) {
+    audioSourceHTML += '<option><a href="#">'+ audio[i] + '</a></option>';
+  };
+};

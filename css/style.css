@@ -74,6 +74,10 @@ nav li.last{
   border-right: none;
 }
 
+select {
+  width: 10%;
+}
+
 .seekbar, .volbar {
   background-image:url('../img/seekbar.png');
   width: 100px;

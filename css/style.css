@@ -90,6 +90,44 @@ select {
   width: 50px;
 }
 
+.camSelect {
+  background:url('../img/cam.png');
+  width: 20px;
+  display: inline; 
+  background-size: 100% 100%;
+  background-position: 5% 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+
+}
+
+.micSelect {
+  background:url('../img/mic.png');
+  width: 20px;
+  display: inline; 
+  background-size: 100% 100%;
+  background-position: 5% 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+
+}
+
+.cam{
+  width:100px;
+}
+
+.mic{
+  width:100px;
+}
+
+select{
+  border:none;
+}
+
+
+
 li .cursor {
   text-align: none;
 }

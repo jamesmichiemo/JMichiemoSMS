@@ -1,0 +1,22 @@
+{
+  "name": "www",
+  "version": "0.0.0",
+  "description": "elearning",
+  "main": "application.js",
+  "scripts": {
+    "test": "gogrunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesmichiemo/JMichiemoSMS.git"
+  },
+  "keywords": [
+    "emu"
+  ],
+  "author": "jamesmichiemo",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jamesmichiemo/JMichiemoSMS/issues"
+  },
+  "homepage": "https://github.com/jamesmichiemo/JMichiemoSMS"
+}

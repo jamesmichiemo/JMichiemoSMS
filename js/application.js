@@ -94,17 +94,20 @@ $('.volbar').on('click', function(e){
   flash.setVolume(perc);
 });
 
-
-$('.mic').mouseenter(function(){
-  $('.mic div').html('<select>' + audioSourceHTML + "</select>").fadeIn();
-}); 
-     
-$('select').mouseleave(function(){
-  $(this).fadeOut();
+$('.camSelect').click(function(){
+  var cameras = flash.getCameras();
+  for(var i=0; cameras.length > i ; i++){
+    $('.camSelect').append('<option>'+cameras[i]+'</option>')
+  }
+  $(this).unbind();
 });
 
-var loadSources = function(){
-  for(var i = 0, max = cameras.length; i<max; i++) {
-    audioSourceHTML += '<option><a href="#">'+ audio[i] + '</a></option>';
-  };
-};
+$('.micSelect').click(function(){
+  var microphones = flash.getMicrophones();
+  for(var i=0; microphones.length > i ; i++){
+    $('.micSelect').append('<option>'+microphones[i]+'</option>')
+  }
+  $(this).unbind();
+});
+
+

@@ -6,15 +6,19 @@
     <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='css/style.css'>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type="text/javascript" src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
     <script type="text/javascript" src="js/swfobject.js"></script>
     <script type="text/javascript" src="js/sms_setup.js"></script>
+
    
   </head>
   <body>
     <div id="top-bar"></div>
     <div class='container'>
       <div class='login-link'>
-        <a href='/login'>Log in</a>
+        <a href='#' id='gh_login'>Github Login</a>
+        <a href='#' id='tw_login'>Twitter Login</a>
       </div>
       <div class='content'>
         <header>
@@ -59,9 +63,16 @@
                 </li>
                 </li>
               </ul>
-            </nav>                 
+              </nav>
+              <div id='messagesDiv'></div>
+              <input type='text' id='nameInput' placeholder='Name'>
+              <input type='text' id='messageInput' placeholder='Message'>
           </div>
         </div>
+	 		</div>
+	 	</div>
+	 </div>
+
         <nav>
           <ul>
             <li>Home</li>
@@ -108,6 +119,7 @@
         </footer>
       </div>
     </div>
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
     <script src='js/jquery-1.10.2.min.js'></script> 
     <script src='js/application.js'></script>
   </body>

@@ -23,7 +23,7 @@ body {
 }
 
 a, a:visited {
-  color: #279327;
+  color: #932727;
 }
 
 .content {
@@ -33,10 +33,12 @@ a, a:visited {
 
 header {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .video {
   height: 333px;
+  margin-left: -60px;
 }
 
 .video-container {
@@ -49,6 +51,7 @@ nav {
   line-height: 1.25em;
   overflow: hidden;
   padding: 0.75em 0;
+  text-align: center;
 }
 
 nav ul {

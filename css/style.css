@@ -87,7 +87,9 @@ select {
   display: inline-block; 
   background-size: 100% 100%;
   background-position: 5% 5%;
+  text-align: left;
 }
+
 
 .volbar{
   width: 50px;

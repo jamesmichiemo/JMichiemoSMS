@@ -32,7 +32,7 @@ var auth = new FirebaseSimpleLogin(myDataRef, function(error, user) {
       alert(error);
     } else if (user) {
       // user authenticated with Firebase
-      alert('User ID: ' + user.name + ', Provider: ' + user.provider);
+      //alert('User ID: ' + user.name + ', Provider: ' + user.provider);
       if (user.provider == 'github'){
         $('#gh_login').html("Log out");
         $('#tw_login').html('');
@@ -50,7 +50,6 @@ $("#gh_login").on("click", function(e){
 	if ($(this).html() == "Github Login") {
 		auth.login("github");
     $(this).html("Log out");
-    $(this).prepend("<div>" + user.name + "</div>");
     $('#tw_login').html('');
     $('#nameInput').val(user.name);
 	} else {

@@ -50,6 +50,7 @@ $("#gh_login").on("click", function(e){
 	if ($(this).html() == "Github Login") {
 		auth.login("github");
     $(this).html("Log out");
+    $(this).prepend("<div>" + user.name + "</div>");
     $('#tw_login').html('');
     $('#nameInput').val(user.name);
 	} else {
@@ -71,8 +72,6 @@ $("#tw_login").on("click", function(e){
     $('#gh_login').html('Github Login');
 	}
 });
-
-
 
 // end firebase
 
@@ -111,10 +110,8 @@ $('.rec').on('click', function(e){
 var connected = function(success,error){
   if(success){
     audio = flash.getMicrophones();
-    
     flash.startPlaying("hobbit_vp6.flv");
     $('.play img').attr('src', 'img/stop.png');
-
     loadSources();
   } 
 };
